@@ -1,0 +1,51 @@
+{
+  "name": "vtoy-ui",
+  "version": "1.0.0",
+  "description": "Mobile UI Components built on Vue",
+  "scripts": {
+    "dev": "vant-cli dev",
+    "test": "vant-cli test",
+    "lint": "vant-cli lint",
+    "build": "vant-cli build",
+    "release": "vant-cli release",
+    "build-site": "vant-cli build-site"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "vant commit-lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
+    "*.{vue,css,less,scss}": "stylelint --fix"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@vant"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@vant/stylelint-config"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "browserslist": [
+    "Android >= 4.0",
+    "iOS >= 8"
+  ],
+  "dependencies": {
+    "@babel/runtime": "7.x",
+    "@vue/compiler-sfc": "^3.0.5",
+    "postcss": "^8.2.3",
+    "postcss-loader": "^4.1.0",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vant/cli": "^3.1.8"
+  }
+}

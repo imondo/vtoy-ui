@@ -1,0 +1,35 @@
+.roll-list-wap {
+  position: relative;
+  height: 335px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  .roll-list {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    transition: top 0.5s;
+    .roll-item {
+      line-height: 35px;
+      font-size: 14px;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    .text {
+      padding-right: 20px;
+    }
+    .value {
+      display: inline-block;
+      width: 160px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+  }
+}
